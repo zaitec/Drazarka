@@ -1,0 +1,20 @@
+# Include your custom_postgui HAL commands here
+# This file will not be overwritten when you run PNCconf again
+
+#zatrzymanie przy nawrocie
+#net program-start-btn halui.mode.auto and2.0.in0 <= hm2_5i25.0.gpio.015.in
+#net program-run-ok and2.0.in1 <= halui.mode.is-auto
+#net remote-program-run halui.program.run <= and2.0.out
+#net signal-name motion.feed-hold <= hm2_5i25.0.gpio.014.in #podpinka pinu do M53 pause
+
+
+
+net zwarcie hm2_5i25.0.gpio.016.in_not => pyvcp.zwarcie 
+net nawrot_zatrzymanie hm2_5i25.0.gpio.014.in_not => pyvcp.nawrot_zatrzymanie
+net zerwanie_drutu hm2_5i25.0.gpio.013.in => pyvcp.zerwanie_drutu
+
+
+net ignoruj_zwarcie <= pyvcp.ignoruj_zwarcie  
+#net ignoruj_zwarcie_invert => pyvcp.zwarcie_ignorowane 
+
+net zwarcie_ignorowane => pyvcp.zwarcie_ignorowane 

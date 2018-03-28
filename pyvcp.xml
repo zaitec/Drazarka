@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<pyvcp>
+  <vbox>
+    
+    <labelframe text="Zwarcie">  
+   
+	<hbox>
+	  <label><text>""</text></label>
+	  <led>
+	    <halpin>"zwarcie"</halpin>
+	    <size>40</size>
+	  <on_color>"red"</on_color>
+	  <off_color>"green"</off_color>
+	  </led>
+	 </hbox>
+	 
+	 <hbox>
+	  <checkbutton>
+	    <halpin>"ignoruj_zwarcie"</halpin>
+	    <text>"Ignoruj zwarcie"</text>
+	    <initval>0</initval>
+	  </checkbutton>
+	 </hbox>
+	
+	<hbox>
+	  <label><text>"po ignoracji:"</text></label>
+	  <led>
+	    <halpin>"zwarcie_ignorowane"</halpin>
+	    <size>40</size>
+	  <on_color>"red"</on_color>
+	  <off_color>"green"</off_color>
+	  </led>
+	 </hbox>
+ 
+     
+    </labelframe>
+    
+    
+    <labelframe text="nawrot_zatrzymanie:">
+      <hbox>
+	<led>
+	  <halpin>"nawrot_zatrzymanie"</halpin>
+	  <size>40</size>
+	  <on_color>"red"</on_color>
+	  <off_color>"green"</off_color>
+	</led>
+      </hbox>
+    </labelframe>
+    <labelframe text="zerwanie_drutu:">        
+      <hbox>
+	<led>	    
+	  <halpin>"zerwanie_drutu"</halpin>
+	  <size>60</size>
+	  <on_color>"red"</on_color>
+	  <off_color>"green"</off_color>
+	</led>
+      </hbox>
+    </labelframe>   
+	
+
+  </vbox>
+</pyvcp>
